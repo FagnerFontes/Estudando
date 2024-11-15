@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <title>Algoritmos</title>
+  </head>
+
+  <style>
+    li {
+      font-family: "aparajita";
+      font-size: 18px;
+    }
+
+    strong {
+      color: rgba(199, 80, 25, 0.904);
+      font-family: "Times New Roman", Times, serif;
+    }
+
+    p {
+      color: brown;
+    }
+
+    P:hover{
+       color: tomato;
+    }
+
+    .normal{
+        color: black;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+  </style>
+  <body>
+    <h1
+      class="container-fluid p-2 bg-body-secondary fixed-top text-center text-body"
+    >
+      Algoritmos
+    </h1>
+    <div class="p-4 invisible"></div>
+    <br />
+
+    <div class="container">
+      <ol>
+        <li>
+          O que é, um algoritmo? <br />
+          <br />
+
+          <p>
+            É qualquer procedimento computacional bem definido que toma algum
+            valor ou conjunto de valores como entrada e produz algum valor ou
+            conjunto de valores como saída. Portando, um algoritmo é uma
+            sequência de etapas computacionais que transforma a entrada na
+            saída. Também podemos considerar um algoritmo como uma ferramenta
+            para resolver um problema computacional bem especificado. O
+            enunciado do problema especifica em termos gerais a relação entre
+            entrada e saída. <br />
+            <br />
+            Por exemplo, poderia ser necessário ordenar uma sequência de números
+            em ordem não decrescente. Esse problema surge com frequência na
+            prática e oferece um solo fértil para a apresentação de muitas
+            técnicas de projeto e ferramentas de análise padronizadas.
+          </p>
+        </li>
+        <li>
+          Como podemos definir o problema de ordenação?
+          <br />
+
+          <p>
+            Saída: Uma permutação (reordenação) 〈a1’ , a2’, ..., an’〉 da
+            sequência de entrada, tal que a1’ ≤ a2’ ≤ ... ≤ an’. Por exemplo,
+            dada a sequência de entrada (31, 41, 59, 26, 41, 58), um algoritmo
+            de ordenação devolve a como saída a sequência (26, 31, 41, 41, 58,
+            59). Tal sequência de entrada é denominada instância do problema de
+            ordenação. Em geral, uma instância de um problema consiste na
+            entrada (que satisfaz quaisquer restrições impostas no enunciado do
+            problema) necessária para calcular uma solução para o problema.
+          </p>
+        </li>
+        <li>
+           Muitos programas utilizam o algoritmo como etapa intermediária, a
+          ordenação é uma operação fundamental em ciência da computação e, por
+          isso, há um grande número de bons algoritmos de ordenação à nossa
+          disposição. Justifique. 
+          <br>
+          <br>
+          <p>
+            O melhor algoritmo para determinada aplicação depende – entre outros
+            fatores – do número de itens a ordenar, do grau de ordenação já
+            apresentado por esses itens, das possíveis restrições aos valores
+            dos itens, da arquitetura do computador e do tipo de dispositivo de
+            armazenamento que será utilizado: memória principal, discos ou até
+            mesmo fitas. Diz-se que um algoritmo é correto se, para toda
+            instância de entrada, ele parar com a saída correta. Dizemos que um
+            algoritmo correto resolve o problema computacional dado. Um
+            algoritmo incorreto poderia não parar em algumas instâncias de
+            entrada ou poderia parar com uma resposta incorreta. Ao contrário do
+            que poderia esperar, às vezes os algoritmos incorretos podem ser
+            úteis, se pudermos controlar sua taxa de erros. Um algoritmo pode
+            ser especificado em linguagem como um programa ou mesmo como um
+            projeto hardware. O único requisito é que a especificação deve
+            fornecer uma descrição precisa do procedimento computacional a ser
+            seguido.
+          </p>
+        </li>
+           	
+        <li>
+            Fundamente o algoritmo por inserção. 
+
+            <P>
+                O algoritmo de ordenação por inserção (ou Insertion Sort) é uma técnica simples e eficiente para ordenar pequenos conjuntos de dados. Sua ideia central é construir uma lista ordenada de forma incremental, elemento por elemento, e a cada novo elemento, inseri-lo na posição correta dentro da lista já ordenada. 
+            </P>
+        </li>
+        <li>
+            	Qual o funcionamento do algoritmo por inserção? 
+
+                <p>
+                    <ol type="I">
+                        <li>
+                            <strong>Divisão do conjunto </strong>: 
+                            O algoritmo considera que lista possui duas partes: uma parte ordenada e uma parte não ordenada. No início, a parte ordenada consiste apenas no primeiro elemento da lista, enquanto os demais elementos são a parte não ordenada. 
+                        </li>
+                        <li>
+                            <strong>Iteração sobre os elementos:</strong>: 
+                            O algoritmo percorre a lista a partir do segundo elemento. Para cada elemento da lista (<i>considerando uma  <strong>chave</strong></i> ou <strong>key</strong>) , ele é comparado com os elementos anteriores, que já estão na parte ordenada. 
+                        </li>
+                        <li>
+                            <strong>Inserção na posição correta</strong>: Cada elemento da parte não ordenada é inserido na posição correta na parte ordenada. Para isso, o algoritmo deslocal os elementos maiiores para frente até encontrar a posição onde a chave deve ser inserida.
+                        </li>
+                        <li>
+                            <strong>Repetição até o final</strong>: Este processo continua até que todos os elementos tenham sido inseridos na parte ordenada.   
+                        </li>
+                    </ol>
+                </p>
+        </li>
+
+        <li>
+            Nosso primeiro algoritmo por inserção. 
+
+            <p>
+            <br>    
+            Nosso primeiro algoritmo, o de ordenação por inserção.
+            
+            <strong>Entrada</strong> : Uma sequência de n números 〈a1, a2, ..., an〉. <br> <br>
+
+            <strong>Saída</strong>: Uma permutação (reordenação) 〈a′1, a′2,..., a′n〉 da sequência de entrada, tal que a′1≤ a′2≤ ... ≤ a. <br>
+                
+                Os números que desejamos ordenar 
+        </p>
+
+            <normal>
+                Os números que desejamos ordenar também são conhecidos como <strong>chaves</strong>. Embora conceitualmente esteja ordenando uma sequ~encia, a entrada é dada na forma de um arranjo com <i>n</i> elementos.
+            </normal>
+        </li>
+
+        
+
+
+      </ol>
+    </div>
+
+    <script src="./exer1.js"></script>
+  </body>
+</html>
